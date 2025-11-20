@@ -9,4 +9,5 @@ py_library(
     deps = [
         "@pypi//pyswisseph",
     ],
+    data = glob(["flatlib/resources/swefiles/*"]),
 )
