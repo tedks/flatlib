@@ -1,0 +1,19 @@
+module(
+    name = "flatlib",
+    version = "0.2.3",
+)
+
+bazel_dep(name = "rules_python", version = "2.3.2")
+
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.defaults(python_version = "3.11")
+python.toolchain(python_version = "3.11")
+use_repo(python, "python_3_11")
+
+pypi = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pypi.parse(
+    hub_name = "flatlib_pypi",
+    python_version = "3.11",
+    requirements_lock = "//:requirements_lock.txt",
+)
+use_repo(pypi, "flatlib_pypi")
