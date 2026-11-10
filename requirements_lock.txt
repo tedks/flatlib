@@ -1,0 +1,2 @@
+pyswisseph==2.08.00-1 \
+    --hash=sha256:6b4818c0224d309c0b01f3c52df2432900dddcde345364408d99eafc9cdd1e71
