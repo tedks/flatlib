@@ -11,6 +11,7 @@ py_test(
     ],
     imports = ["."],
     main = "test_main.py",
+    python_version = "3.11",
     deps = ["//:flatlib"],
     legacy_create_init = 0,
 )

@@ -10,8 +10,6 @@ python.defaults(python_version = "3.11")
 python.toolchain(python_version = "3.11")
 use_repo(python, "python_3_11")
 
-register_toolchains("@python_3_11//:all")
-
 pypi = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
 pypi.parse(
     hub_name = "flatlib_pypi",
